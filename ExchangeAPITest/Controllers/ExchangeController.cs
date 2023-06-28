@@ -15,13 +15,15 @@ namespace ExchangeAPITest.Controllers
         {
             _exchangeDb = exchangeDb;
         }
-
+        
+        // Duvidas se precisa ser gravado no banco ou não//
+        //Duvidas se está certa a maneira de pensar//
+        
         [HttpGet]
         public async Task<CurrencyResponse> GetAllCurrencys()
         {
             HttpClient client = new HttpClient();
             var response = await client.GetAsync("http://data.fixer.io/api/latest?access_key=147ac5d07434f372ab5ceab67f637ab3");
-
 
             var jsonstring = await response.Content.ReadAsStringAsync();
 
@@ -29,7 +31,9 @@ namespace ExchangeAPITest.Controllers
 
             return jsonObject;
         }
-
+        
+        //Ainda vou implementar essa parte, mas só depois que funconar o GetAll//
+        
         [HttpGet]
         [Route("{id:int}")]
         public IActionResult GetSpecificExchengeCurrancy()
