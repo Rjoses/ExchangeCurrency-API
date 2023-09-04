@@ -7,6 +7,8 @@ namespace ExchangeAPITest.Controllers
 {
     [Route("api/v1/exchange")]
     [ApiController]
+
+    //TODO: Considerar todos os comentarios abaixo.
     public class ExchangeController : ControllerBase
     {
         //Essa não é a forma correta de abrir PR, eu vou abrir um disso e nas proximas versoes sempre enviar como PR, lembra que te mostrei como criar uma feature branch, e a partir dela abrir um PR para master, mas analise, o pr que estou abrindo com esses TODO é um exemplo para os proximos.
